@@ -4,9 +4,24 @@ import java.util.Scanner;
 
 import static org.example.Info.*;
 public class Main {
+    static char til = 'u';
     public static void main(String[] args) {
 
         while (true) {
+            System.out.println("""
+                    Tilni tanlang, Choose language
+                    1.English
+                    2.Uzbek
+                    """);
+            int choose_lange = (new Scanner(System.in)).nextInt();
+            if(choose_lange == 1){
+                til = 'e';
+            } else if (choose_lange == 2) {
+                til = 'u';
+            } else {
+                System.out.println("Error");
+            }
+
             System.out.println("Salom Auto_marketga xush kelibsiz Registratsaydan o'ting");
             Scanner scanner = new Scanner(System.in);
             System.out.println("Telefon raqam uchun 1 bosing");
@@ -89,17 +104,13 @@ public class Main {
         }
     }
     static void menu () {
-        System.out.println("""
-                1.Mashina olish
-                2.Mashina sotish
-                3.Exit
-                """);
+        System.out.println(til == 'e' ? MENU_ENG : MENU_UZB);
     }
 
     static void SportCar (){
         boolean exit = true;
         while (exit){
-            System.out.println(SPORT_CAR);
+            System.out.println(til == 'e' ? SPORT_CAR_EN : SPORT_CAR);
             int number = (new Scanner(System.in)).nextInt();
             switch (number) {
                 case 1:
