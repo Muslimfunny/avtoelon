@@ -21,7 +21,6 @@ public class Main {
             } else {
                 System.out.println("Error");
             }
-
             System.out.println("Salom Auto_marketga xush kelibsiz Registratsaydan o'ting");
             Scanner scanner = new Scanner(System.in);
             System.out.println("Telefon raqam uchun 1 bosing");
