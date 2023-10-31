@@ -21,27 +21,26 @@ public class Main {
             } else {
                 System.out.println("Error");
             }
-            System.out.println("Salom Auto_marketga xush kelibsiz Registratsaydan o'ting");
+            System.out.println(til == 'e' ? INFO_ENG : INFO_UZB);
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Telefon raqam uchun 1 bosing");
-            System.out.println("Google akaunt uchun 2 bosing");
+            System.out.println(til == 'e' ? ENTER_ENG : ENTER_UZB);
             int Kirish = scanner.nextInt();
             if (Kirish == 1) {
-                System.out.println("Telefon raqam kiritng");
+                System.out.println(til == 'e' ? ENTER_PHONONUMBER : ENTER_PHONONUMBER2);
                 String Phone_number = scanner.next();
                 if(Phone_number.startsWith("+998") && Phone_number.length() == 13){
-                    System.out.println("Great");
+                    System.out.println(til == 'e' ? YAXshi : YAXshi2);
                 }else{
                     System.out.println("Error");
                     continue;
                 }
             } else if (Kirish == 2) {
-                System.out.println("Google akaunt kiritng");
+                System.out.println(til == 'e' ? GOOGLE2 : GOOGLE3);
                 String Google_ak = scanner.next();
                 char g = Google_ak.charAt(0);
                 if(g == '@' && Google_ak.length() > 8){
-                    System.out.println("Great");
-                    System.out.println("Ismingizni kiriting");
+                    System.out.println(til == 'e' ? ZOR1: ZOR2);
+                    System.out.println("Enter your name");
                     String user_name = scanner.next();
                     if(user_name.length() > 8){
                         System.out.println("Great next step");
